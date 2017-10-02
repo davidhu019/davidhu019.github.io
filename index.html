@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Count people in image</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="mturk.js"></script>
+<script>
+    var numclicks = 0;
+    var keydowns = 0;
+    var addedelements = [];
+
+    $(document).ready(function() {
+        $("#theimage").click(function(e) {
+            numclicks++;
+            console.log(e);
+            $("#numberofpeople").text(numclicks);
+            $("#numberofpeoplefield").val(numclicks);
+
+            var newdomelement = $("<div class='marker'></div>");
+            newdomelement.css("left", (e.pageX-3) + "px");
+            newdomelement.css("top", (e.pageY-3) + "px");
+
+            newdomelement.click(removeElementEvent);
+            $("body").append(newdomelement);
+            addedelements.push(newdomelement);
+        })
+    })
+
+    function removeElement(elem) {
+        $(elem).remove();
+
+        numclicks--;
+        $("#numberofpeople").text(numclicks);
+        $("#numberofpeoplefield").val(numclicks);
+    }
+
+    function removeElementEvent(e) {
+        removeElement(this);
+    }
+</script>
+
+<style type="text/css">
+    .marker {
+        border: 2px solid red;
+        border-radius: 5px;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+    }
+</style>
+</head>
+
+
+
+<body>
+    <h1>A test HIT</h1>
+
+    <img id="theimage" src="image/people6.jpg">
+    <p>
+        You've selected <span id="numberofpeople">o</span> people.
+    </p>
+
+
+    <form id="mturk_form">
+    <p>
+        <input id="numberofpeoplefield" type="hidden" name="peopleInImage">
+        <input type="submit" name="Submit">
+    </p>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
