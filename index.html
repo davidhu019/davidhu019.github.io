@@ -1,358 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Count people in image</title>
-<meta charset="utf-8">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="mturk.js"></script>
-<script>
-    var numclicks6 = 0;
-    var keydowns6 = 0;
-    var addedelements6 = [];
-
-    $(document).ready(function() {
-        $("#theimage6").click(function(e) {
-            numclicks6++;
-            console.log(e);
-            $("#numberofpeople6").text(numclicks6);
-            $("#numberofpeoplefield6").val(numclicks6);
-
-            var newdomelement6 = $("<div class='marker'></div>");
-            newdomelement6.css("left", (e.pageX-7) + "px");
-            newdomelement6.css("top", (e.pageY-7) + "px");
-
-            newdomelement6.click(removeElementEvent6);
-            $("body").append(newdomelement6);
-            addedelements6.push(newdomelement6);
-        })
-    })
-
-    function removeElement6(elem) {
-        $(elem).remove();
-
-        numclicks6--;
-        $("#numberofpeople6").text(numclicks6);
-        $("#numberofpeoplefield6").val(numclicks6);
-    }
-
-    function removeElementEvent6(e) {
-        removeElement6(this);
-    }
-
-
-    var numclicks1 = 0;
-    var keydowns1 = 0;
-    var addedelements1 = [];
-
-    $(document).ready(function() {
-        $("#theimage1").click(function(e) {
-            numclicks1++;
-            console.log(e);
-            $("#numberofpeople1").text(numclicks1);
-            $("#numberofpeoplefield1").val(numclicks1);
-
-            var newdomelement1 = $("<div class='marker2'></div>");
-            newdomelement1.css("left", (e.pageX-25) + "px");
-            newdomelement1.css("top", (e.pageY-25) + "px");
-
-            newdomelement1.click(removeElementEvent1);
-            $("body").append(newdomelement1);
-            addedelements1.push(newdomelement1);
-        })
-    })
-
-    function removeElement1(elem) {
-        $(elem).remove();
-
-        numclicks1--;
-        $("#numberofpeople1").text(numclicks1);
-        $("#numberofpeoplefield1").val(numclicks1);
-    }
-
-    function removeElementEvent1(e) {
-        removeElement1(this);
-    }
-
-
-    var numclicks2 = 0;
-    var keydowns2 = 0;
-    var addedelements2 = [];
-
-    $(document).ready(function() {
-        $("#theimage2").click(function(e) {
-            numclicks2++;
-            console.log(e);
-            $("#numberofpeople2").text(numclicks2);
-            $("#numberofpeoplefield2").val(numclicks2);
-
-            var newdomelement2 = $("<div class='marker2'></div>");
-            newdomelement2.css("left", (e.pageX-25) + "px");
-            newdomelement2.css("top", (e.pageY-25) + "px");
-
-            newdomelement2.click(removeElementEvent2);
-            $("body").append(newdomelement2);
-            addedelements2.push(newdomelement2);
-        })
-    })
-
-    function removeElement2(elem) {
-        $(elem).remove();
-
-        numclicks2--;
-        $("#numberofpeople2").text(numclicks2);
-        $("#numberofpeoplefield2").val(numclicks2);
-    }
-
-    function removeElementEvent2(e) {
-        removeElement2(this);
-    }
-
-
-    var numclicks3 = 0;
-    var keydowns3 = 0;
-    var addedelements3 = [];
-
-    $(document).ready(function() {
-        $("#theimage3").click(function(e) {
-            numclicks3++;
-            console.log(e);
-            $("#numberofpeople3").text(numclicks3);
-            $("#numberofpeoplefield3").val(numclicks3);
-
-            var newdomelement3 = $("<div class='marker2'></div>");
-            newdomelement3.css("left", (e.pageX-25) + "px");
-            newdomelement3.css("top", (e.pageY-25) + "px");
-
-            newdomelement3.click(removeElementEvent3);
-            $("body").append(newdomelement3);
-            addedelements3.push(newdomelement3);
-        })
-    })
-
-    function removeElement3(elem) {
-        $(elem).remove();
-
-        numclicks3--;
-        $("#numberofpeople3").text(numclicks3);
-        $("#numberofpeoplefield3").val(numclicks3);
-    }
-
-    function removeElementEvent3(e) {
-        removeElement3(this);
-    }
-
-
-    var numclicks4 = 0;
-    var keydowns4 = 0;
-    var addedelements4 = [];
-
-    $(document).ready(function() {
-        $("#theimage4").click(function(e) {
-            numclicks4++;
-            console.log(e);
-            $("#numberofpeople4").text(numclicks4);
-            $("#numberofpeoplefield4").val(numclicks4);
-
-            var newdomelement4 = $("<div class='marker2'></div>");
-            newdomelement4.css("left", (e.pageX-25) + "px");
-            newdomelement4.css("top", (e.pageY-25) + "px");
-
-            newdomelement4.click(removeElementEvent4);
-            $("body").append(newdomelement4);
-            addedelements4.push(newdomelement4);
-        })
-    })
-
-    function removeElement4(elem) {
-        $(elem).remove();
-
-        numclicks4--;
-        $("#numberofpeople4").text(numclicks4);
-        $("#numberofpeoplefield4").val(numclicks4);
-    }
-
-    function removeElementEvent4(e) {
-        removeElement4(this);
-    }
-
-
-    var numclicks5 = 0;
-    var keydowns5 = 0;
-    var addedelements5 = [];
-
-    $(document).ready(function() {
-        $("#theimage5").click(function(e) {
-            numclicks5++;
-            console.log(e);
-            $("#numberofpeople5").text(numclicks5);
-            $("#numberofpeoplefield5").val(numclicks5);
-
-            var newdomelement5 = $("<div class='marker2'></div>");
-            newdomelement5.css("left", (e.pageX-25) + "px");
-            newdomelement5.css("top", (e.pageY-25) + "px");
-
-            newdomelement5.click(removeElementEvent5);
-            $("body").append(newdomelement5);
-            addedelements5.push(newdomelement5);
-        })
-    })
-
-    function removeElement5(elem) {
-        $(elem).remove();
-
-        numclicks5--;
-        $("#numberofpeople5").text(numclicks5);
-        $("#numberofpeoplefield5").val(numclicks5);
-    }
-
-    function removeElementEvent5(e) {
-        removeElement5(this);
-    }
-
-
-
-    var numclicks7 = 0;
-    var keydowns7 = 0;
-    var addedelements7 = [];
-
-    $(document).ready(function() {
-        $("#theimage7").click(function(e) {
-            numclicks7++;
-            console.log(e);
-            $("#numberofpeople7").text(numclicks7);
-            $("#numberofpeoplefield7").val(numclicks7);
-
-            var newdomelement7 = $("<div class='marker2'></div>");
-            newdomelement7.css("left", (e.pageX-25) + "px");
-            newdomelement7.css("top", (e.pageY-25) + "px");
-
-            newdomelement7.click(removeElementEvent7);
-            $("body").append(newdomelement7);
-            addedelements7.push(newdomelement7);
-        })
-    })
-
-    function removeElement7(elem) {
-        $(elem).remove();
-
-        numclicks7--;
-        $("#numberofpeople7").text(numclicks7);
-        $("#numberofpeoplefield7").val(numclicks7);
-    }
-
-    function removeElementEvent7(e) {
-        removeElement7(this);
-    }
-</script>
-
-<style type="text/css">
-    .marker {
-    width: 10px;
-    height: 10px;
-    background: red;
-    opacity: 0.9;
-    -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-    border-radius: 7px;
-    position: absolute;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-    border: 2px solid white;
-    }
-
-.marker2 {
-    width: 50px;
-    height: 50px;
-    background: red;
-    opacity: 0.8;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    border-radius: 25px;
-    position: absolute;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    margin
-}
-
-
-</style>
+    <meta charset="utf-8" />
+    <title>FlattyBird</title>
+    <link href="style.css" rel="stylesheet" />
 </head>
 
-
-
 <body>
-    <h1>Count number of people in the image</h1>
+<!--	 Testing the git command line tool-->
+    <div id="container">
 
-    <h2 style="max-width: 1000px; font-weight: 400;">To count number of people in image, simply click on people in the image, there would show up a dot, and the system would automatically count for you. Reclick on the dot to undo. More than half of a head in image should count as one person.</br></br>Extra $1.00 bonus for counting the last image right.</h2>
+        <div id="bird"></div>
 
+        <div id="pole_1" class="pole"></div>
+        <div id="pole_2" class="pole"></div>
 
+    </div>
 
-    <img id="theimage1" src="image/people1.jpg" style="width: 1000px; margin-top: 100px;">
-    <p>
-        You've selected <span id="numberofpeople1">o</span> people.
-    </p>
-    <img id="theimage2" src="image/people2.jpg" style="width: 1000px; margin-top: 100px;">
-    <p>
-        You've selected <span id="numberofpeople2">o</span> people.
-    </p>
-    <img id="theimage3" src="image/people3.jpg" style="width: 1000px; margin-top: 100px;">
-    <p>
-        You've selected <span id="numberofpeople3">o</span> people.
-    </p>
-    <img id="theimage7" src="image/people7.jpg" style="width: 1000px; margin-top: 100px;">
-    <p>
-        You've selected <span id="numberofpeople7">o</span> people.
-    </p>
-    <img id="theimage4" src="image/people4.jpg" style="width: 1000px; margin-top: 100px;">
-    <p>
-        You've selected <span id="numberofpeople4">o</span> people.
-    </p>
-    <img id="theimage5" src="image/people5.png" style="width: 1000px; margin-top: 100px;">
-    <p>
-        You've selected <span id="numberofpeople5">o</span> people.
-    </p>
-    <img id="theimage6" src="image/people6.jpg" style="width: 1000px; margin-top: 100px;">
-    <p>
-        You've selected <span id="numberofpeople6">o</span> people.
-    </p>
+    <div id="score_div">
+        <p><b>You have earned: $</b><span id="score">0</span></p>
+<!--         <p><b>Speed: </b><span id="speed">10</span></p>
+ -->    </div>
 
+<!--     <button id="restart_btn">Restart</button>
+ -->
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
 
     <form id="mturk_form">
     <p>
-        <input id="numberofpeoplefield6" type="hidden" name="peopleInImage6">
-        <input id="numberofpeoplefield1" type="hidden" name="peopleInImage1">
-        <input id="numberofpeoplefield2" type="hidden" name="peopleInImage2">
-        <input id="numberofpeoplefield3" type="hidden" name="peopleInImage3">
-        <input id="numberofpeoplefield4" type="hidden" name="peopleInImage4">
-        <input id="numberofpeoplefield5" type="hidden" name="peopleInImage5">
-        <input id="numberofpeoplefield7" type="hidden" name="peopleInImage7">
+        <input id="score" type="hidden" name="bonus">
         <input type="submit" name="Submit" class="button">
     </p>
 
-
 </body>
-
-
-
-
-
-
-
-
-
-
-
 
 </html>
